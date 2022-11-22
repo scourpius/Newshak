@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+input,
+input::placeholder {
+    font: 20px sans-serif;
+}
+
+/* Login page css*/
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.login input {
+    width: 85%;
+    height: 65px;
+    padding: 6px 10px;
+    border: 3px solid rgb(0, 100, 255);
+    box-shadow: 15px 15px black;
+}
+
+.inputLogUser {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.inputLogPwd {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.login button {
+  font-weight: bold;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 4px 6px black;
+  display: block;
+  margin: auto;
+  margin-block: 30px;
+}
+
+.log{
+  background: rgb(0, 0, 255);
+  width: 50%;
+  height: 50px;
+  font-size: 20px;
+}
+
+.reg{
+  background: #f1356d;
+  width: 35%;
+}
