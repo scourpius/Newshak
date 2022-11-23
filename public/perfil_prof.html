@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    .container1{
+        width: 50%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30%;
+        margin-top: 10%;
+    }   
+    .perfil-pic{
+        width: 175px;
+        border-radius: 49%;
+        background: #02408D;
+        padding: 4px;
+        margin-top: -14%;
+        margin-left: 57%; 
+        z-index:  2;
+
+    }
+    .profile-box{
+        width: 40%;
+        background-color: #3A70B4;
+        text-align: left;
+        color: #fff;
+        padding-left: 10PX;
+        position: absolute;
+        border-radius: 20px;  
+    } 
+    h3 {
+        text-decoration: underline;
+    }
+    </style>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>aluno app</title>
+  </head>
+  <body> 
+    <div class ="container1">
+        <h1>Perfil</h1>
+        <img src="perfil_prof.png" class="perfil-pic">
+        <div class ="profile-box">
+            <h1>s.gomes</h1>
+            <h3>Nome:</h3>
+            <h4>Sara Gomes</h4>
+            <h3>E-mail:</h3>
+            <h4>s.gomes@campus.fct.unl.pt</h4>
+            <h3>Universidade:</h3>
+            <h4>Faculdade Nova de Ciências e Tecnologia</h4>
+            <br>
+            <div class="col-sm-6 ">
+                <p style="color: #DB868B;"><span class="glyphicon glyphicon-wrench", style="color: #DB868B;"></span> Editar informação </p> 
+            </div>
+            <div class="col-sm-6 ", style="text-align: right;">
+                <p style="text-decoration: underline;">Mudar Password? </p>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
