@@ -8,17 +8,13 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const history = useHistory()
 
-  const routeRegister = () => {
+  const routeToRegister = () => {
     history.push("/register")
   }
 
   function loginManager(e){
     e.preventDefault()
-    login(username, password).then(val => {if (val) routeLogin(); else console.log("nope")})
-  }
-
-  function routeLogin(){
-    history.push("/register")
+    login(username, password).then(val => {if (val) routeToRegister(); else console.log("nope")})
   }
 
   return (
@@ -40,7 +36,7 @@ const Login = () => {
           placeholder = "Password"
         />
         <button className='log' onClick={(e) => { loginManager(e) }}>Iniciar Sessão</button>
-        <button className='reg' onClick={routeRegister}>Criar Conta</button>
+        <button className='reg' onClick={routeToRegister}>Criar Conta</button>
       </form>
     </div>
   )

@@ -13,14 +13,14 @@ const Register = () => {
 
   const history = useHistory()
 
-  const routeLogin = () => {
+  const routeToLogin = () => {
     history.push("/")
   }
 
   function registerManager(e){
     e.preventDefault()
     if (confirmation === password)
-      register(username, name, email, university, password).then(val => {if (val) routeLogin(); else console.log("nope")})
+      register(username, name, email, university, password).then(val => {if (val) routeToLogin(); else console.log("nope")})
     else
       console.log("Mismatch")
   }
@@ -76,7 +76,7 @@ const Register = () => {
           />
         </div>
         <button className='log2' onClick={(e) => { registerManager(e) }}>Confirmar</button>
-        <button className='reg2' onClick={routeLogin}>Fazer Login</button>
+        <button className='reg2' onClick={routeToLogin}>Fazer Login</button>
       </form>
     </div>
   )
