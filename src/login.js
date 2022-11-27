@@ -14,17 +14,13 @@ const Login = () => {
   const [popupI, setPopupI] = useState(false);
   const history = useHistory()
 
-  const routeRegister = () => {
+  const routeToRegister = () => {
     history.push("/register")
   }
 
   function loginManager(e){
     e.preventDefault()
-    login(username, password).then(val => {if (val) routeLogin(); else console.log("nope")})
-  }
-
-  function routeLogin(){
-    history.push("/register")
+    login(username, password).then(val => {if (val) routeToRegister(); else console.log("nope")})
   }
 
   return (
@@ -44,7 +40,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password" />
         <button className='log' onClick={(e) => { loginManager(e); } }>Login</button>
-        <button className='reg' onClick={routeRegister}>Register an Account</button>
+        <button className='reg' onClick={routeToRegister}>Register an Account</button>
         <button className='help' onClick={() => {setPopupH(true)}}>?</button>
         <button className='info' onClick={() => {setPopupI(true)}}>i</button>
         <PopupI trigger = {popupI} setTrigger={setPopupI}>
