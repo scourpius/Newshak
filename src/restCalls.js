@@ -10,7 +10,6 @@
             })
         }).then((response) => response.json())
         .then((data) => {
-            console.log(data)
            localStorage.setItem('user', JSON.stringify(data))
            return true
         }).catch(() => {return false});
@@ -29,6 +28,37 @@
 		        email: email,
 		        password: password
             })
-        }).then(() => {return true})
-          .catch(() => {return false});
-    } 
+        }).then((response) => {return response.ok;});
+    }
+
+    export function contestList(username){
+        return fetch("https://newshak.appspot.com/rest/user/contests", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: username
+            })
+        }).then((response) => response.json())
+        .then((data) => {
+           localStorage.setItem('contests', JSON.stringify(data))
+           return true
+        }).catch(() => {return false});
+    }
+
+    export function createContest(name, subject, date, description){
+        return fetch("https://newshak.appspot.com/rest/user/contests", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                subject: subject,
+                description: description,
+                date: date,
+                isOpen: true
+            })
+        }).then((response) => {return response.ok;});
+    }
