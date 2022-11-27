@@ -3,7 +3,7 @@
 /* base styles */
 * {
   margin: 0;
-  font-family: "Quicksand";
+  font-family: 'Calibri';
   color: #333;
 }
 
@@ -16,11 +16,15 @@ input::placeholder {
 .login {
   max-width: 400px;
   margin: 0 auto;
+  
 }
 
 .login label {
-  text-align: left;
   font-weight: bold;
+  font-size: 28px;
+  margin-left: 37%;
+  position: relative;
+  top:25px;
 }
 
 .login input {
@@ -28,7 +32,10 @@ input::placeholder {
     height: 65px;
     padding: 6px 10px;
     border: 3px solid rgb(0, 100, 255);
-    box-shadow: 15px 15px black;
+    box-shadow: 10px 10px black;
+    outline: none;
+    position: relative;
+    top:30px;
 }
 
 .inputLogUser {
@@ -45,23 +52,58 @@ input::placeholder {
   font-weight: bold;
   color: #fff;
   border: 0;
-  padding: 8px;
-  border-radius: 30px;
   cursor: pointer;
   box-shadow: 4px 6px black;
-  display: block;
   margin: auto;
   margin-block: 30px;
+  position: relative;
+  top:30px;
 }
 
 .log{
-  background: rgb(0, 0, 255);
-  width: 50%;
-  height: 50px;
+  background: rgb(0, 0, 130);
+  width: 60%;
+  height: 55px;
   font-size: 20px;
+  border-radius: 30px;
+  display: block;
+  right: 10px;
+  top: 10px;
 }
 
 .reg{
   background: #f1356d;
-  width: 35%;
+  width: 47%;
+  height: 40px;
+  border-radius: 30px;
+  display: block;
+  right: 10px;
+  top: 10px;
+}
+
+.info{
+  background: rgb(0, 0, 130);
+  font-size: 20px;
+  border-radius: 70%;
+  height:60px;
+  width:60px;
+  float: right;
+  left:50%;
+}
+
+.help{
+  background: rgb(0, 0, 130);
+  border-radius: 70%;
+  height:60px;
+  width:60px;
+  float: right;
+  left:60%;
+}
+
+.inf{
+  font-weight: lighter;
+}
+
+.hel{
+  font-weight: normal;
 }

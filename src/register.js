@@ -57,21 +57,21 @@ const Register = () => {
             type="text" 
             required 
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder = "Username"
           />
           <input
             type="text" 
             required 
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setUniversity(e.target.value)}
             placeholder = "Nome"
           />
           <input className='inputRegEmail'
             type="text" 
             required 
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setConfirmation(e.target.value)}
             placeholder = "Email"
           />
         </div>
