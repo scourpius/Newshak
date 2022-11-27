@@ -1,0 +1,237 @@
+.App {
+}
+
+.Titulo{
+  color: #02408D;
+  alignment: center;
+  margin-right: 200px;
+  text-shadow: 1px 1px 0px black;
+  font-weight: bolder;
+  font-size: calc(10px + 2vmin);
+}
+
+.Relogio{
+  color: black;
+  padding-left: 120px;
+  text-shadow: 2px 2px 0px grey;
+  text-outline: 1px 1px black;
+  font-weight: bolder;
+  font-size: calc(5px + 2vmin);
+}
+
+.timer {
+  color: #D77B80;
+  font-weight: bold;
+  font-size: calc(5px + 2vmin);
+  text-shadow: 1px 1px 0px black;
+  text-outline: 1px 1px black;
+}
+
+
+.perfilImage{
+  width: 80px;
+  height: 80px;
+  outline: black solid 2px;
+  border-radius: 100px;
+  box-shadow: 3px 5px 0px black;
+}
+
+.perfilText{
+  align-content: center;
+  alignment: left;
+  margin-left:30px;
+  color: black;
+  font-size: calc(20px + 2vmin);
+}
+
+.menu{
+  padding-top: 1px;
+  margin-bottom: 27px;
+  padding-bottom: 1px;
+  margin-top: 26px;
+  background-color: #DB868B;
+  color: white;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 8px 0px black;
+  font-size: 23px;
+  width: 115%;
+}
+
+.seperatorMenu{
+  background: white;
+  height: 2px;
+}
+
+.seperatorResults{
+  background: darkgrey;
+  height: 1px;
+  width: 80%;
+  margin: auto;
+}
+
+.exit{
+  background-color: #B25656;
+  width: 115%;
+  align-items: center;
+  outline: black solid 2px;
+  border-radius: 50px;
+  box-shadow: 10px 8px 0px black;
+  height: 5vh;
+  justifyContent: 'center';
+  alignItems: 'center';
+  text-align: center;
+}
+
+.container{
+  overflow:hidden;
+  width:auto;
+  display:inline-flex;
+  align-content: space-around;
+  gridTemplateColumns: "repeat(3, 1fr)";
+}
+
+.barra {
+  display: inline-flex;
+  background-color: #02408D;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-right: 0px;
+  justify-content: space-around;
+  align-content: center;
+  outline: black solid 2px;
+  border-radius: 5px;
+  box-shadow: 10px 7px 0px black;
+  font-size: 10px;
+  font-weight: bold;
+  width: 91%;
+  height: 25px;
+}
+
+.projetos {
+  background-color: #3A70B4;
+  margin-top: 15px;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 7px 0px black;
+  height: 50vh;
+  width: 91%;
+}
+
+.uploadbox {
+  display: block;
+  padding-top: 3px;
+  background-color: white;
+  outline: black solid 2px;
+  box-shadow: 5px 6px 0px #D77B80;
+  height: 20vh;
+  width: 91%;
+  align-content: center;
+}
+
+.upload {
+  margin: auto;
+  width: 91%;
+  padding: 10px;
+  alignment: center;
+  background-color: #E0ECFC;
+  outline: grey solid 1px;
+  height: 85%;
+  text-align: center;
+}
+
+.chat {
+  display: inline;
+  background-color: white;
+  box-shadow: 5px 4px 0px black;
+  margin: auto;
+  margin-top: 17px;
+  margin-left: 0px;
+  outline: black solid 2px;
+  height: 50vh;
+  width: 91%;
+}
+
+.chatBoard {
+  margin: auto;
+  display: block;
+  padding-top: 3px;
+  margin-bottom: 16px;
+  background-color: white;
+  outline: black solid 2px;
+  height: 80%;
+  width: 100%;
+  align-content: center;
+}
+
+.chatField {
+  margin: auto;
+  margin-left: 10px;
+  width: 280px;
+  padding-top: 20px;
+  alignment: center;
+  background-color: white;
+  outline: black solid 1px;
+  height: 20px;
+}
+.sendChat {
+  margin: auto;
+  width: 55px;
+  margin-right: 10px;
+  background-color: black;
+  outline: black solid 1px;
+  height: 40px;
+}
+
+.submissions {
+  background: linear-gradient(0deg, #0167E7 50%, white 45%);
+  margin-top: 15px;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 7px 4px 0px black;
+  align-items: center;
+  alignment: center;
+  align-content: center;
+  height: 27vh;
+  width: 91%;
+  text-align: center;
+}
+
+.members {
+  background-color: #3A70B4;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 97px;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 7px 0px black;
+  height: 50vh;
+  width: 91%;
+  overflow: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: white;
+  min-height: 0vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
