@@ -8,14 +8,19 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import com.google.gson.Gson;
+
 import newshak.util.LoginData;
 import newshak.util.RegisterData;
+import newshak.util.UserInfo;
 
 import com.google.cloud.datastore.*;
 
 @Path("/user")
 @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
 public class UserResources {
+	private final Gson g = new Gson();
+
 	private final Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 	
 	//User information
@@ -24,6 +29,7 @@ public class UserResources {
 	private static final String EMAIL = "Email";
 	private static final String ROLE = "Role";
 	private static final String UNIVERSITY = "University";
+
 
 	//Keys
 	private static final String USER = "User";
@@ -81,7 +87,9 @@ public class UserResources {
 
 		if(!pwd.equals(data.password))
 			return Response.status(Status.FORBIDDEN).build();
-				
+		
+		UserInfo u = new UserInfo(user.getString(NAME), user.getKey().getName(), user.getString(UNIVERSITY), user.getString(EMAIL), user.getString(ROLE));
+		
 		return Response.ok().build();
 	}
 
