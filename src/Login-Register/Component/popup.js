@@ -6,8 +6,8 @@ function Popup(props) {
             <div className="popup">
                 <div className="popup-inner">
                     <div className='header'>
-                        <h1>Newshak</h1>
-                        <h2>Your project delivery platform</h2>
+                        <h1 className='header1'>Newshak</h1>
+                        <h2 className='header2'>Your project delivery platform</h2>
                         <br></br>
                         <br></br>
                         <hr></hr>

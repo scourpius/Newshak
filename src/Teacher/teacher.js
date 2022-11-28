@@ -4,14 +4,13 @@ import { useRef} from 'react';
 import gradient from './resources/gradient2.jpg';
 import perfil from './resources/chamucas.jpg';
 import exitIcon from './resources/exit.png';
-import './App.css';
-//const project = {title: '', chair: '', date: '', desc: ''};
+import './teacher.css';
 var myListProj = [];
 var textAlert = "";
 
 
 
-export default function App() {
+const Teacher = () => {
   const navigate = useNavigate();
 
   const navigatePerfilProf = () => {
@@ -19,7 +18,7 @@ export default function App() {
   };
 
   const navigateProjetosProf = () => {
-    navigate('/');
+    navigate('/teacher');
   };
 
   const navigateCadeirasProf = () => {
@@ -31,16 +30,13 @@ export default function App() {
   }
 
   const navigateOutProf = () => {
-    navigate('/logoutProf')
+    navigate('/')
   }
 
  
 
 
   return (
-
-    
-
     <div className="App">
 
   <header className="App-header">
@@ -83,7 +79,7 @@ export default function App() {
     </div>
 
     
-    <div  class="leftElem">    
+    <div id='' class="leftElem">    
      
                             
       <Routes>
@@ -148,7 +144,7 @@ function ProjetosProf() {
   const navigate = useNavigate();
 
   const createProjProf = () => {
-    navigate('/createProjProf')
+    navigate('/createProjProf');
   }
 
   const listItems = myListProj.map((myListProj)=>{   
@@ -219,15 +215,16 @@ function CadeirasProf() {
 }
 
 function LogoutProf() {
-  return <h2>Goodbye</h2>;
+  const navigate = useNavigate();
+  navigate('/');
 }
 
-function CreateProjProf() {
+const CreateProjProf = () =>  {
 
   const navigate = useNavigate();
 
   const navigateProjetosProf = () => {
-    navigate('/');
+    navigate('/teacher');
   };
 
 
@@ -512,3 +509,5 @@ const handleClick = () => {
 
   );
 }
+
+export default Teacher;
