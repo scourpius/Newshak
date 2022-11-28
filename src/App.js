@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Login from './login';
-import Register from './register';
+import Login from './Login-Register/login';
+import Register from './Login-Register/register';
+import Teacher from './Teacher/teacher';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
           </Route>
           <Route exact path = "/register">
             <Register />
+          </Route>
+          <Route exact path = "/teacher">
+            <Teacher />
           </Route>
         </Switch>
       </div>

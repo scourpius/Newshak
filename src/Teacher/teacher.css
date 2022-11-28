@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+
+.exit{
+  background-color: #B25656;
+  width: 115%;
+  align-items: center;
+  outline: black solid 2px;
+  border-radius: 50px;
+  box-shadow: 10px 8px 0px black;
+  height: 5vh;
+  justify-content: 'center';
+  align-items: 'center';
+  text-align: center;
+}
+
+.menu{
+  padding-top: 1px;
+  margin-bottom: 27px;
+  padding-bottom: 1px;
+  margin-top: 26px;
+  background-color: #DB868B;
+  color: white;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 8px 0px black;
+  font-size: 23px;
+  width: 115%;
+}
+
+.perfilImage{
+  width: 80px;
+  height: 80px;
+  outline: black solid 2px;
+  border-radius: 100px;
+  box-shadow: 3px 5px 0px black;
+}
+
+.perfilText{
+  align-content: center;
+  text-align: left;
+  margin-left:30px;
+  color: black;
+  font-size: calc(20px + 2vmin);
+}
+.seperatorMenu{
+  background: white;
+  height: 2px;
+}
+
+.seperatorResults{
+  background: darkgrey;
+  height: 1px;
+  width: 80%;
+  margin: auto;
+}
+
+
+.barra {
+  display: inline-flex;
+  background-color: #02408D;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-right: 0px;
+  justify-content: space-around;
+  align-content: center;
+  outline: black solid 2px;
+  border-radius: 5px;
+  box-shadow: 10px 7px 0px black;
+  font-size: 10px;
+  font-weight: bold;
+  width: 91%;
+  height: 25px;
+}
+
+.leftElem{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin-right: 55%;
+  margin-top: 10%;
+}
+
+
+.projectsToShow{
+  display: inline-block;
+  margin-right: -160%;
+  margin-top: -7%;
+  text-align:left;
+}
+
+.createProj{
+  display: inline-block;
+  margin-right: -160%;
+  margin-top: -13%;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+.App-header {
+  background-color: white;
+  min-height: 0vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

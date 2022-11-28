@@ -22,9 +22,9 @@ const Login = () => {
     var user = JSON.parse(localStorage.getItem('user'))
     //TODO push page to dashboard
     if (user.role === "Student")
-      history.push("/")
+      history.push("/teacher")
     else
-      history.push("/")
+      history.push("/teacher")
   }
 
   function errorHandle() {
