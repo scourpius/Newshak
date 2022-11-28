@@ -43,7 +43,7 @@
   background: black;
   height: 1px;
   margin:auto;
-  width: 95%;
+  width: 100%;
 }
 
 .menu{
@@ -91,7 +91,7 @@
 }
 
 .projetos {
-  background: linear-gradient(90deg, white 25%, #3A70B4 0%);
+  background: linear-gradient(90deg, white 29%, #3A70B4 0%);
   margin-top: 15px;
   outline: black solid 2px;
   border-radius: 20px;

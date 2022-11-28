@@ -149,7 +149,7 @@
   margin-left: 0px;
   outline: black solid 2px;
   height: 50vh;
-  width: 91%;
+  width: 120%;
 }
 
 .chatBoard {
@@ -159,28 +159,21 @@
   margin-bottom: 16px;
   background-color: white;
   outline: black solid 2px;
-  height: 80%;
+  height: 85%;
   width: 100%;
   align-content: center;
+  overflow: auto;
 }
 
 .chatField {
   margin: auto;
   margin-left: 10px;
   width: 280px;
-  padding-top: 20px;
   alignment: center;
   background-color: white;
   outline: black solid 1px;
-  height: 20px;
-}
-.sendChat {
-  margin: auto;
-  width: 55px;
-  margin-right: 10px;
-  background-color: black;
-  outline: black solid 1px;
-  height: 40px;
+  height: 15px;
+  font-size: calc(5px + 2vmin);
 }
 
 .submissions {

@@ -4,28 +4,66 @@ import perfil from './resources/chamucas.jpg';
 import exitIcon from './resources/exit.png';
 import sendArrow from './resources/arrow.png';
 import { BrowserRouter as Link } from "react-router-dom";
+import React from "react";
+import { useState } from "react";
+import ReactDOM from 'react-dom/client';
 
 
 
 const Project = () => {
-
+    const [message, setMessage] = useState("");
+    const [file, setFile] = useState("");
+    const [score, setScore] = useState("0");
+    const [tests, setTests] = useState("0");
+    const username = "t.sequeira";
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (message !== '') {
+            messagesL.push([{"name":username}, {"message":message}]);
+            setMessage("");
+        }
+    }
+    const handleSubmitFile = (event) => {
+        event.preventDefault();
+        if (file !== '') {
+            if(file.split('\\')[file.split('\\').length-1] == ("solution.txt")) {
+                alert("Sucess!");
+                setScore(200);
+                setFile("");
+                setTests(10);
+            } else {
+                alert("Failed! Number of tests still to pass: 10.");
+                setFile("");
+            }
+        }
+    }
     const professors = ["s.gomes", "r.simões"]
     const onlineMembers = ["j.paio", "d.machado", "m.mota", "t.sequeira", "d.gomes"];
     const offlineMembers = ["t.duarte", "m.correia", "r.shamsudin", "m.barros", "t.gonçalves", "p.diogo"]
     let messages = [[{"name":"j.paio"},{"message":"@s.gomes boa noite professora, estou com uma dúvida no resultado da questão 5."}],
         [{"name":"s.gomes"},{"message":"teremos um tempo dedicado para responder a questões na próxima aula prática."}],
         [{"name":"d.machado"},{"message":"Eu tive um problema também no valor da questão 3, alguém sabe se é para usar o valor indicado?"}]]
-
+    const current = new Date();
+    const [messagesL] = useState(messages);
     const listProfessors = professors.map((member) =>  <li style={{listStyle: 'none', paddingBottom: 5, paddingTop: 5, fontStyle: "italic"}}>{member}</li>);
     const listOnlineMembers = onlineMembers.map((member) =>  <li style={{listStyle: 'none', paddingBottom: 5, paddingTop: 5}}>{member}</li>);
     const listOfflineMembers = offlineMembers.map((member) =>  <li style={{listStyle: 'none', paddingBottom: 5, paddingTop: 5, color: "lightgray"}}>{member}</li>);
-    const listMessages = messages.map((messages) =>
+    const listMessages = messagesL.map((messages) =>
         <div>
             <li style={{listStyle: 'none', margin: "auto", paddingLeft: 10, paddingBottom: 0, paddingTop: 5, color: "black", fontWeight: "bold", fontStyle: "italic"}}>
         {messages[0].name}</li>
                 <li style={{listStyle: 'none', paddingBottom: 15, paddingLeft: 5, paddingTop: 0, color: "black"}}>
-                    {messages[1].message}</li></div>);
+                    {"- " + messages[1].message}</li></div>);
+
+    const [time, setTime] = React.useState(new Date());
+
+    React.useEffect(() => {
+        setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+    }, []);
     return (
+
 
     <div className="App">
 
@@ -38,7 +76,7 @@ const Project = () => {
                       alignItems: 'center',
                       gridTemplateColumns: "repeat(2, 1fr)"}}>
                       <img className="perfilImage" src={perfil} alt="Perfil" />
-                      <span className="perfilText">t.sequeira</span>
+                      <span className="perfilText">{username}</span>
                   </div>
                   <div className="menu">
                       <div style={{ paddingLeft: 15, marginTop: 12, marginBottom: 12}}>Projetos</div>
@@ -60,7 +98,7 @@ const Project = () => {
                           alignItems: 'left',
                           gridTemplateColumns: "repeat(2, 1fr)"}}>
                           <span className="Titulo">Programação 22/23 - Project 1: Water System</span>
-                          <span className="Relogio">15215135</span>
+                          <span className="Relogio">{current.toLocaleTimeString("pt-PT")}</span>
                       </div>
                   </div>
                   <div className="barra">
@@ -77,12 +115,24 @@ const Project = () => {
                               gridTemplateColumns: "repeat(2, 1fr)", paddingLeft: 200, paddingRight: 120}}>
                               <div className="uploadbox">
                                   <div className="upload">
-                                      <div style={{paddingTop: 50, fontStyle: "italic"}}>Arraste os seus ficheiros para aqui!</div>
+                                      <form onSubmit={handleSubmitFile} style={{width: 200, paddingLeft: 20,margin: "auto", overflow: "clip"}}>
+                                          <label>
+                                              <div style={{paddingTop: 20, paddingBottom: 20, fontStyle: "italic"}}>Drag your file here!</div>
+                                              <input
+
+                                                  type="file"
+                                                  value={file}
+                                                  onChange={(e) => setFile(e.target.value)}
+                                              />
+                                          </label>
+                                          <input style={{marginTop: 20}} type="submit" value={"Avaliar?"} />
+                                      </form>
+
                                   </div>
                               </div>
                               <div className="submissions">
-                                      <div style={{fontSize: 20, fontWeight: 'bold', color: "black"}}>0/200</div>
-                                      <div>0 tests answered</div>
+                                      <div style={{fontSize: 20, fontWeight: 'bold', color: "black"}}>{score}/200</div>
+                                      <div>{tests} tests answered</div>
                                       <div className="seperatorResults"></div>
                                       <div className="timer">22:13:46</div>
                                       <div>21/12/22 - 17:00</div>
@@ -96,14 +146,16 @@ const Project = () => {
                           <div className="chatBoard">
                               {listMessages}
                           </div>
-                          <div style={{display: "inline-flex",
-                              gridTemplateColumns: "repeat(2, 1fr)"}}>
-                              <div className="chatField"></div>
-                              <div className="sendChat">
-                                  <img style={{width: 30, height: 25,
-                                      paddingLeft: 12,paddingBottom: 20, paddingTop: 8, marginBottom: 100}} src={sendArrow} alt="SendArrow" />
-                              </div>
-                          </div>
+                          <form onSubmit={handleSubmit} style={{width: 200, paddingLeft: 20,margin: "auto"}}>
+                              <label>
+                                  <input
+                                      type="text"
+                                      value={message}
+                                      onChange={(e) => setMessage(e.target.value)}
+                                  />
+                              </label>
+                              <input type="submit" value={" 〉"} />
+                          </form>
                       </div>
                       <div className="members">
                           <div style={{width: 100, paddingTop: 20, margin: "auto", fontSize:17, color: "white"}}>
