@@ -2,7 +2,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 import React, { useState } from 'react';
 import { useRef} from 'react';
 import gradient from './resources/gradient2.jpg';
-import perfil from './resources/chamucas.jpg';
+import perfil_prof from './resources/perfil_prof.png';
 import exitIcon from './resources/exit.png';
 import './teacher.css';
 var myListProj = [];
@@ -52,8 +52,8 @@ const Teacher = () => {
   <div style={{display: "flex", justifyContent: 'center',
                       alignItems: 'center',
                       gridTemplateColumns: "repeat(2, 1fr)"}}>
-                      <img className="perfilImage" src={perfil} alt="Perfil" />
-                      <span className="perfilText">t.sequeira</span>
+                      <img className="perfilImage" src={perfil_prof} alt="Perfil" />
+                      <span className="perfilText">s.gomes</span>
   </div>
 
 
