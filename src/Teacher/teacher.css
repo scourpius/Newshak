@@ -85,15 +85,17 @@
 
 .projectsToShow{
   display: inline-block;
-  margin-right: -160%;
+  margin-right: -100%;
   margin-top: -7%;
-  text-align:left;
+  margin-left: 75%;
+  text-align: left;
 }
 
 .createProj{
   display: inline-block;
-  margin-right: -160%;
-  margin-top: -13%;
+  margin-right: -100%;
+  margin-top: -10%;
+  margin-left: 90%;
   text-align: left;
 }
 
