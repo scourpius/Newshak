@@ -1,6 +1,10 @@
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import React, { useState } from 'react';
 import { useRef} from 'react';
+import gradient from './resources/gradient2.jpg';
+import perfil from './resources/chamucas.jpg';
+import exitIcon from './resources/exit.png';
+import './App.css';
 //const project = {title: '', chair: '', date: '', desc: ''};
 var myListProj = [];
 var textAlert = "";
@@ -34,29 +38,67 @@ export default function App() {
 
 
   return (
-    <div>
-      <h1>Teacher 1</h1>
-      <div>
-        <button onClick={navigateProjetosProf}>Manage Projects</button>
-        <br></br>
-        <button onClick={navigatePerfilProf}>Profile</button>
-        <br></br>
-        <button onClick={navigateCadeirasProf}>My Courses</button>
-        <br></br>
-        <button onClick={navigateOpcoesProf}>Options</button>
-        <br></br>
-        <button onClick={navigateOutProf}>Logout</button>
-        <br></br>
 
-        <Routes>
+    
+
+    <div className="App">
+
+  <header className="App-header">
+
+  <img style={{ width: "100%", height: 160 }} src={gradient} alt="Gradient" />
+
+
+  <div style={{display: "flex", gridTemplateColumns: "repeat(2, 1fr)"}}>
+
+
+  <div style = {{marginLeft: 160, marginTop: 40}}>
+
+  <div style={{display: "flex", justifyContent: 'center',
+                      alignItems: 'center',
+                      gridTemplateColumns: "repeat(2, 1fr)"}}>
+                      <img className="perfilImage" src={perfil} alt="Perfil" />
+                      <span className="perfilText">t.sequeira</span>
+  </div>
+
+
+  <div className="menu">
+                      <div style={{ paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigateProjetosProf}>Manage Projects</div>
+                      <div className="seperatorMenu"></div>
+                      <div style={{paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigatePerfilProf}>Profile</div>
+                      <div className="seperatorMenu"></div>
+                      <div style={{paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigateCadeirasProf}>My Courses</div>
+                      <div className="seperatorMenu"></div>
+                      <div style={{paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigateOpcoesProf}>Options</div>
+  </div>
+
+
+  <div className="exit" onClick={navigateOutProf}>
+                      <img style={{width: 30, height: 25, paddingTop: 6}} src={exitIcon} alt="ExitIcon"  />
+  </div>
+
+      
+   
+    
+    </div>
+    </div>
+
+    
+    <div  class="leftElem">    
+     
+                            
+      <Routes>
           <Route path="/perfilProf" element={<PerfilProf />} />
           <Route path="/" element={<ProjetosProf />} />
           <Route path="/cadeirasProf" element={<CadeirasProf />} />
           <Route path="/opcoesProf" element={<OpcoesProf />} />
           <Route path="/logoutProf" element={<LogoutProf/>}/>
           <Route path="/createProjProf" element={<CreateProjProf/>}/>
-        </Routes>
-      </div>
+        </Routes>                      
+      </div>                  
+        
+       
+
+  </header>
     </div>
   );
 }
@@ -114,14 +156,15 @@ function ProjetosProf() {
 });   
 
   return (
-    <div>
+    <div className="projectsToShow">
       <br></br>
-      <br></br>
-      <br></br>
-      <button onClick={()=>{createProjProf(); textAlert=""}}>Create New Project</button>
       <br></br>
       <br></br>
       <h1>My Projects</h1>
+      <button onClick={()=>{createProjProf(); textAlert=""}}>Create New Project</button>
+      <br></br>
+      <br></br>
+   
 
   
     <text> {listItems} </text>
@@ -241,7 +284,7 @@ const handleClick = () => {
   return (
 
     
-    <div>
+    <div className="createProj">
       <br></br>
       <br></br>
       <br></br>
