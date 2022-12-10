@@ -13,6 +13,37 @@
   justify-content: 'center';
   align-items: 'center';
   text-align: center;
+  cursor: pointer;
+}
+
+.buttonNew{
+  color: white;
+  background: #DB868B;
+  width: 20%;
+  height: 10%;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.newProjButton{
+  color: white;
+  background: #DB868B;
+  width: 15%;
+  height: 6%;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.newCancelButton{
+  color: white;
+  background: #B25656;
+  width: 15%;
+  height: 6%;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .menu{
@@ -20,13 +51,14 @@
   margin-bottom: 27px;
   padding-bottom: 1px;
   margin-top: 26px;
-  background-color: #DB868B;
+  background: linear-gradient(0deg,#DB868B 75%,white 75%, white 100%, #DB868B 0%);
   color: white;
   outline: black solid 2px;
   border-radius: 20px;
   box-shadow: 10px 8px 0px black;
   font-size: 23px;
   width: 115%;
+  cursor: pointer;
 }
 
 .perfilImage{
@@ -75,28 +107,25 @@
 }
 
 .leftElem{
-  display: inline-block;
-  position: absolute;
+  display: flex;
   right: 0;
-  margin-right: 55%;
-  margin-top: 10%;
+ 
 }
 
 
 .projectsToShow{
-  display: inline-block;
-  margin-right: -100%;
-  margin-top: -7%;
-  margin-left: 75%;
-  text-align: left;
+  position: relative;
+  left: 10%;
 }
 
 .createProj{
-  display: inline-block;
-  margin-right: -100%;
-  margin-top: -10%;
-  margin-left: 90%;
-  text-align: left;
+  position: relative;
+  left: 10%;
+}
+
+.opt{
+  position: relative;
+  left: 10%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

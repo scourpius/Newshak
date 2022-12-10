@@ -1,0 +1,126 @@
+
+
+.TituloGAluno{
+  color: #02408D;
+  alignment: center;
+  margin-right: 800px;
+  font-weight: bolder;
+  font-size: calc(40px + 2vmin);
+}
+
+.timerGAluno {
+  color: #D77B80;
+  font-weight: bold;
+  font-size: calc(5px + 2vmin);
+  text-shadow: 1px 1px 0px black;
+  text-outline: 1px 1px black;
+}
+
+.perfilImageGAluno{
+  width: 80px;
+  height: 80px;
+  outline: black solid 2px;
+  border-radius: 100px;
+  box-shadow: 3px 5px 0px black;
+}
+
+.perfilTextGAluno{
+  align-content: center;
+  alignment: left;
+  margin-left:30px;
+  color: black;
+  font-size: calc(20px + 2vmin);
+}
+
+.seperatorMenuGAluno{
+  background: white;
+  height: 2px;
+}
+
+.seperatorProjectsGAluno{
+  background: black;
+  height: 1px;
+  margin:auto;
+  width: 95%;
+}
+
+.menuGAluno{
+  padding-top: 1px;
+  margin-bottom: 27px;
+  padding-bottom: 1px;
+  margin-top: 26px;
+  background: linear-gradient(0deg,#DB868B 25%,white 25%, white 50%, #DB868B 50%);
+  color: white;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 8px 0px black;
+  font-size: 23px;
+  width: 115%;
+  cursor: pointer;
+}
+
+.exitGAluno{
+  background-color: #B25656;
+  width: 115%;
+  align-items: center;
+  outline: black solid 2px;
+  border-radius: 50px;
+  box-shadow: 10px 8px 0px black;
+  height: 5vh;
+  justifyContent: 'center';
+  alignItems: 'center';
+  text-align: center;
+  cursor: pointer;
+}
+
+.barraGAluno {
+  display: inline-flex;
+  background-color: #02408D;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-right: 0px;
+  justify-content: space-around;
+  align-content: center;
+  outline: black solid 2px;
+  border-radius: 5px;
+  box-shadow: 10px 7px 0px black;
+  font-size: 10px;
+  font-weight: bold;
+  width: 91%;
+  height: 25px;
+}
+
+.projetosGAluno {
+  background: linear-gradient(90deg, white 35%, #3A70B4 0%);
+  margin-top: 15px;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 7px 0px black;
+  width: 91%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-headerGAluno {
+  background-color: white;
+  min-height: 0vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-linkGAluno {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

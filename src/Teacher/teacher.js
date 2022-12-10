@@ -14,7 +14,7 @@ const Teacher = () => {
   const navigate = useNavigate();
 
   const navigatePerfilProf = () => {
-    navigate('/perfilProf');
+    navigate('/profProf');
   };
 
   const navigateProjetosProf = () => {
@@ -22,7 +22,7 @@ const Teacher = () => {
   };
 
   const navigateCadeirasProf = () => {
-    navigate('/cadeirasProf')
+    navigate('/gradeProf')
   }
 
   const navigateOpcoesProf = () => {
@@ -58,13 +58,13 @@ const Teacher = () => {
 
 
   <div className="menu">
-                      <div style={{ paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigateProjetosProf}>Manage Projects</div>
+                      <div style={{ paddingLeft: 15, color: 'black', fontWeight: "bold", marginTop: 12, marginBottom: 12}} onClick={navigateProjetosProf}>Manage Projects</div>
                       <div className="seperatorMenu"></div>
                       <div style={{paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigatePerfilProf}>Profile</div>
                       <div className="seperatorMenu"></div>
                       <div style={{paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigateCadeirasProf}>My Courses</div>
                       <div className="seperatorMenu"></div>
-                      <div style={{paddingLeft: 15, marginTop: 12, marginBottom: 12}} onClick={navigateOpcoesProf}>Options</div>
+                      <div style={{paddingLeft: 15, marginTop: 12, marginBottom: 12}} >Options</div>
   </div>
 
 
@@ -76,21 +76,22 @@ const Teacher = () => {
    
     
     </div>
+    <div  class="leftElem">    
+     
+                            
+     <Routes>
+         <Route path="/perfilProf" element={<PerfilProf />} />
+         <Route path="/" element={<ProjetosProf />} />
+         <Route path="/cadeirasProf" element={<CadeirasProf />} />
+         <Route path="/opcoesProf" element={<OpcoesProf />} />
+         <Route path="/logoutProf" element={<LogoutProf/>}/>
+         <Route path="/createProjProf" element={<CreateProjProf/>}/>
+       </Routes>                      
+     </div> 
     </div>
 
     
-    <div id='' class="leftElem">    
-     
-                            
-      <Routes>
-          <Route path="/perfilProf" element={<PerfilProf />} />
-          <Route path="/" element={<ProjetosProf />} />
-          <Route path="/cadeirasProf" element={<CadeirasProf />} />
-          <Route path="/opcoesProf" element={<OpcoesProf />} />
-          <Route path="/logoutProf" element={<LogoutProf/>}/>
-          <Route path="/createProjProf" element={<CreateProjProf/>}/>
-        </Routes>                      
-      </div>                  
+                    
         
        
 
@@ -156,8 +157,13 @@ function ProjetosProf() {
       <br></br>
       <br></br>
       <br></br>
-      <h1>My Projects</h1>
-      <button onClick={()=>{createProjProf(); textAlert=""}}>Create New Project</button>
+      <div style={{display: "flex", justifyContent: 'center',
+                            alignItems: 'center',
+                            gridTemplateColumns: "repeat(2, 1fr)"}}>
+                            <span className="TituloGProf">My Projects</span>
+                        </div>
+      <br></br>
+      <button className='buttonNew' onClick={()=>{createProjProf(); textAlert=""}}>Create New Project</button>
       <br></br>
       <br></br>
    
@@ -171,10 +177,13 @@ function ProjetosProf() {
 }
 
 function OpcoesProf() {
-  return( <div>
-    <h2>Options</h2>
-    <br></br>
-    <h2>No options in this prototype.</h2>
+  return( <div className="opt">
+   <div style={{display: "flex", justifyContent: 'center',
+                            alignItems: 'center',
+                            gridTemplateColumns: "repeat(2, 1fr)"}}>
+                            <span className="TituloGProf">Options</span>
+                        </div>
+                     
   
   </div>);
 }
@@ -262,7 +271,7 @@ const handleClick = () => {
   setUpdatedDay(inputRefDay.current.value);
   setUpdatedMonth(inputRefMonth.current.value);
   setUpdatedYear(inputRefYear.current.value);
-  if(inputRefTitle.current.value !== "" && inputRefChair.current.value !== "" && inputRefDesc.current.value !== "" && inputRefDay.current.value > 0 && inputRefDay.current.value < 31 && inputRefMonth.current.value>0 && inputRefMonth.current.value<=12 && inputRefYear.current.value>0 && inputRefYear.current.value<2200 && inputRefHour.current.value>=0 && inputRefHour.current.value<=23 && inputRefMin.current.value>=0 && inputRefMin.current.value<=59 && inputRefYear.current.value>=2022 ){
+  if(inputRefTitle.current.value !== "" && inputRefChair.current.value !== "" && inputRefDesc.current.value !== "" && inputRefDay.current.value > 0 && inputRefDay.current.value <= 31 && inputRefMonth.current.value>0 && inputRefMonth.current.value<=12 && inputRefYear.current.value>0 && inputRefYear.current.value<2200 && inputRefHour.current.value>=0 && inputRefHour.current.value<=23 && inputRefMin.current.value>=0 && inputRefMin.current.value<=59 && inputRefYear.current.value>=2022 ){
   //fevereiro
   if((inputRefMonth.current.value == 2 && inputRefDay.current.value > 29) || (inputRefDay.current.value === 31 && (inputRefMonth.current.value === 4 || inputRefMonth.current.value === 6|| inputRefMonth.current.value === 9||inputRefMonth.current.value === 11) )){
     textAlert="Invalid Date!";
@@ -285,8 +294,12 @@ const handleClick = () => {
       <br></br>
       <br></br>
       <br></br>
-      <h2>New Project</h2>
-      
+      <div style={{display: "flex", justifyContent: 'center',
+                            alignItems: 'center',
+                            gridTemplateColumns: "repeat(2, 1fr)"}}>
+                            <span className="TituloGProf">New Project</span>
+                        </div>
+      <br></br>
       <form>
       Title: 
       <br></br>
@@ -494,9 +507,9 @@ const handleClick = () => {
       <br></br>
       <text style={{ color: 'red' }}>{textAlert}<br></br></text>
 
-      <button onClick={()=> {handleClick()}}>Create New Project</button>
+      <button className='newProjButton' onClick={()=> {handleClick()}}>Create New Project</button>
       <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      <button onClick={navigateProjetosProf}>Cancel</button>
+      <button className='newCancelButton' onClick={navigateProjetosProf}>Cancel</button>
 
 
 {/*

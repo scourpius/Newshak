@@ -1,0 +1,230 @@
+.App_d2 {
+}
+
+.Titulo_d2{
+  color: #02408D;
+  alignment: center;
+  margin-right: 200px;
+  font-weight: bolder;
+  font-size: calc(10px + 2vmin);
+}
+
+.Relogio_d2{
+  color: black;
+  padding-left: 120px;
+  
+  font-weight: bolder;
+  font-size: calc(5px + 2vmin);
+}
+
+.timer_d2 {
+  color: #D77B80;
+  font-weight: bold;
+  font-size: calc(5px + 2vmin);
+  text-shadow: 1px 1px 0px black;
+  text-outline: 1px 1px black;
+}
+
+
+.perfilImage_d2{
+  width: 80px;
+  height: 80px;
+  outline: black solid 2px;
+  border-radius: 100px;
+  box-shadow: 3px 5px 0px black;
+}
+
+.perfilText_d2{
+  align-content: center;
+  alignment: left;
+  margin-left:30px;
+  color: black;
+  font-size: calc(20px + 2vmin);
+}
+
+.menu_d2{
+  padding-top: 1px;
+  margin-bottom: 27px;
+  padding-bottom: 1px;
+  margin-top: 26px;
+  background-color: #DB868B;
+  color: white;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 8px 0px black;
+  font-size: 23px;
+  width: 115%;
+  cursor: pointer;
+}
+
+.seperatorMenu_d2{
+  background: white;
+  height: 2px;
+}
+
+.seperatorResults_d2{
+  background: darkgrey;
+  height: 1px;
+  width: 80%;
+  margin: auto;
+}
+
+.exit_d2{
+  background-color: #B25656;
+  width: 115%;
+  align-items: center;
+  outline: black solid 2px;
+  border-radius: 50px;
+  box-shadow: 10px 8px 0px black;
+  height: 5vh;
+  justifyContent: 'center';
+  alignItems: 'center';
+  text-align: center;
+  cursor: pointer;
+}
+
+.container_d2{
+  overflow:hidden;
+  width:auto;
+  display:inline-flex;
+  align-content: space-around;
+  gridTemplateColumns: "repeat(3, 1fr)";
+}
+
+.barra_d2 {
+  display: inline-flex;
+  background-color: #02408D;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-right: 0px;
+  justify-content: space-around;
+  align-content: center;
+  outline: black solid 2px;
+  border-radius: 5px;
+  box-shadow: 10px 7px 0px black;
+  font-size: 10px;
+  font-weight: bold;
+  width: 91%;
+  height: 25px;
+}
+
+.projetos_d2 {
+  background-color: #3A70B4;
+  margin-top: 15px;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 7px 0px black;
+  height: 50vh;
+  width: 91%;
+}
+
+.uploadbox_d2 {
+  display: block;
+  padding-top: 3px;
+  background-color: white;
+  outline: black solid 2px;
+  box-shadow: 5px 6px 0px #D77B80;
+  height: 20vh;
+  width: 91%;
+  align-content: center;
+}
+
+.upload_d2 {
+  margin: auto;
+  width: 91%;
+  padding: 10px;
+  alignment: center;
+  background-color: #E0ECFC;
+  outline: grey solid 1px;
+  height: 85%;
+  text-align: center;
+}
+
+.chat_d2 {
+  display: inline;
+  background-color: white;
+  box-shadow: 5px 4px 0px black;
+  margin: auto;
+  margin-top: 17px;
+  margin-left: 0px;
+  outline: black solid 2px;
+  height: 50vh;
+  width: 120%;
+}
+
+.chatBoard_d2 {
+  margin: auto;
+  display: block;
+  padding-top: 3px;
+  margin-bottom: 16px;
+  background-color: white;
+  outline: black solid 2px;
+  height: 85%;
+  width: 100%;
+  align-content: center;
+  overflow: auto;
+}
+
+.chatField_d2 {
+  margin: auto;
+  margin-left: 10px;
+  width: 280px;
+  alignment: center;
+  background-color: white;
+  outline: black solid 1px;
+  height: 15px;
+  font-size: calc(5px + 2vmin);
+}
+
+.submissions_d2 {
+  background: #0167E7;
+  margin-top: 15px;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 7px 4px 0px black;
+  align-items: center;
+  alignment: center;
+  align-content: center;
+  height: 27vh;
+  width: 91%;
+  text-align: center;
+}
+
+.members_d2 {
+  background-color: #3A70B4;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 97px;
+  outline: black solid 2px;
+  border-radius: 20px;
+  box-shadow: 10px 7px 0px black;
+  height: 50vh;
+  width: 91%;
+  overflow: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo_d2 {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header_d2 {
+  background-color: white;
+  min-height: 0vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-link_d2 {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
